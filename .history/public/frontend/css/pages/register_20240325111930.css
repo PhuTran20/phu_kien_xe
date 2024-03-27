@@ -1,0 +1,72 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+input,
+select,
+textarea {
+    background-color: transparent;
+    outline: none;
+}
+button {
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+}
+body {
+    min-height: 100vh;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+
+    background-color: #f1f1f1;
+}
+.form-login {
+    margin: auto 350px;
+    margin-top: 30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 50px;
+    padding: 5px 0px;
+    background-color: #fff;
+}
+.header,
+ {
+    margin: auto 350px;
+}
+.logo {
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-submit:hover {
+    background-color: #1ac7b6;
+}
+
+.link-register {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.link-register .link-tille .link {
+    text-decoration: none;
+    font-weight: 700;
+    color: #333;
+}
