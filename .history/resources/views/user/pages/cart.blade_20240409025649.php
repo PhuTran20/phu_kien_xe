@@ -4,16 +4,13 @@
 
     <!-- breadcrumb -->
 	<div class="container">
-		<div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
-			<a href="index.html" class="stext-109 cl8 hov-cl1 trans-04">
-				Home
-				<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
-			</a>
-
-			<span class="stext-109 cl4">
-				Shoping Cart
-			</span>
-		</div>
+        <nav aria-label="breadcrumb" >
+            <ol class="breadcrumb"  style="background-color: #F2F2F2">
+                <li class="breadcrumb-item"><a href="{{route("All-Product")}}">Home</a></li>
+           
+              <li class="breadcrumb-item active" aria-current="page">Cart</li>
+            </ol>
+          </nav>
 	</div>
 		
 
@@ -33,14 +30,20 @@
 									<th class="column-5">Total</th>
 								</tr>
 
+                                @foreach (Session::get("cart") as $item)
+                                    
+                                    @php
+                                        $total = {{$item["product_price"]}} * {{$item["product_qty"]}}
+                                        print_r($total);
+                                    @endphp
 								<tr class="table_row">
 									<td class="column-1">
 										<div class="how-itemcart1">
-											<img src="images/item-cart-04.jpg" alt="IMG">
+											<img src="{{url("/frontend")}}/images/{{$item["product_image"]}}" alt="IMG">
 										</div>
 									</td>
-									<td class="column-2">Fresh Strawberries</td>
-									<td class="column-3">$ 36.00</td>
+									<td class="column-2">{{$item["product_name"]}}</td>
+									<td class="column-3">{{$item["product_price"]}}</td>
 									<td class="column-4">
 										<div class="wrap-num-product flex-w m-l-auto m-r-0">
 											<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
@@ -56,30 +59,9 @@
 									</td>
 									<td class="column-5">$ 36.00</td>
 								</tr>
+                                @endforeach
 
-								<tr class="table_row">
-									<td class="column-1">
-										<div class="how-itemcart1">
-											<img src="images/item-cart-05.jpg" alt="IMG">
-										</div>
-									</td>
-									<td class="column-2">Lightweight Jacket</td>
-									<td class="column-3">$ 16.00</td>
-									<td class="column-4">
-										<div class="wrap-num-product flex-w m-l-auto m-r-0">
-											<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
-												<i class="fs-16 zmdi zmdi-minus"></i>
-											</div>
-
-											<input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product2" value="1">
-
-											<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
-												<i class="fs-16 zmdi zmdi-plus"></i>
-											</div>
-										</div>
-									</td>
-									<td class="column-5">$ 16.00</td>
-								</tr>
+						 
 							</table>
 						</div>
 

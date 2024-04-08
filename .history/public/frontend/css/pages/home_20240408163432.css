@@ -1,0 +1,8 @@
+.price-wrapper {
+    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử con */
+    align-items: l; /* Căn giữa các phần tử theo chiều dọc */
+}
+
+.price {
+    margin-right: 10px; /* Tạo khoảng cách giữa giá và nút Add to cart */
+}
