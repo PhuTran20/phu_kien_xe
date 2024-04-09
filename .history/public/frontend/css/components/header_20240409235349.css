@@ -1,0 +1,28 @@
+.dropdown {
+}
+.dropdown .dropdown_select {
+}
+.dropdown_list {
+    margin-top: 0.5rem;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    right: 0;
+    /* display: none; */
+    z-index: 10;
+}
+.dropdown .dropdown_item {
+    background-color: #222222;
+    border-radius: 10px;
+    width: 100px;
+}
+.dropdown_item a {
+    font-size: 14px;
+    text-align: center;
+    color: #999999;
+    a
+}
+.dropdown_list.show {
+    display: block;
+}
+

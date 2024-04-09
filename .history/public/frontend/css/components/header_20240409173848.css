@@ -1,0 +1,12 @@
+.dropdown {
+    width: 50px;
+    margin: 2px 5px;
+    padding: 8px;
+    cursor: pointer;
+}
+.dropdown .dropdown_selected {
+    margin-right: 10px;
+}
+.dropdown .dropdown_item {
+    background-color: #222222;
+}

@@ -1,0 +1,10 @@
+.dropdown {
+    width: 50px;
+    margin: 2px 5px;
+    padding: 8px;
+    cursor: pointer;
+}
+.dropdown .dropdown_selected {
+    margin-right: 10px;
+}
+.dr

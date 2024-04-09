@@ -1,0 +1,9 @@
+.dropdown {
+    position: relative;
+}
+.dropdown .dropdown_select {
+     margin-top: 23px;
+}
+.dropdown .dropdown_item {
+    background-color: #222222;
+}
