@@ -51,7 +51,7 @@
                         <p class="stext-102 cl3 p-t-23">
                             <span class="mtext-106 cl2" style="font-size: 15px">   Price:	
                             </span> 
-                            {{(number_format( $product_detail->price , 0, '.', '.') . ' VNĐ')}}
+                            {{$product_detail->price}} {{(number_format( $item["product_price"] , 0, '.', '.') . ' VNĐ')}}
                                 
                                 
                         </p>

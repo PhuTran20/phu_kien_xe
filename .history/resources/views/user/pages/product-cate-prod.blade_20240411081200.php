@@ -246,7 +246,7 @@
                                         </a>
             
                                         <span class="stext-105 cl3">
-                                         {{(number_format( $item->price, 0, '.', '.') . ' VNĐ')}}
+                                            {{$item->price}} {{(number_format( $item->price, 0, '.', '.') . ' VNĐ')}}
                                         </span>
                                     </div>
             

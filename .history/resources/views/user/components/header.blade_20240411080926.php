@@ -313,7 +313,7 @@ $cart =Session::get("cart");
             
             <div class="w-full">
                 <div class="header-cart-total w-full p-tb-40">
-                    Total: {{(number_format( $subtotal, 0, '.', '.') . ' VNĐ')}}
+                    Total: {{ $subtotal}}
                 </div>
 
                 <div class="header-cart-buttons flex-w w-full">

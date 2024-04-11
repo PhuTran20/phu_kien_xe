@@ -193,9 +193,8 @@ $cart =Session::get("cart");
                         $qty += $item["product_qty"] ;
                   
                     @endphp
-                    
-                    @endforeach
                     <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="{{$qty}}">
+                    @endforeach
                     @endif
                         <i class="zmdi zmdi-shopping-cart"></i>
                     </div>
@@ -281,15 +280,8 @@ $cart =Session::get("cart");
                 <p>khong co sp trong gio</p>
             @else
                 
-                @php
-                     $subtotal=0;
-                @endphp
+      
             @foreach ($cart as $item)
-                        
-                @php
-                 $sub = $item["product_price"] * $item["product_qty"];
-                  $subtotal+=$sub;
-                @endphp
                 <li class="header-cart-item flex-w flex-t m-b-12">
                     <div class="header-cart-item-img">
                         <img src="{{url("/frontend")}}/images/{{$item["product_image"]}}" alt="IMG">
@@ -313,7 +305,7 @@ $cart =Session::get("cart");
             
             <div class="w-full">
                 <div class="header-cart-total w-full p-tb-40">
-                    Total: {{(number_format( $subtotal, 0, '.', '.') . ' VNĐ')}}
+                    Total: $75.00
                 </div>
 
                 <div class="header-cart-buttons flex-w w-full">
